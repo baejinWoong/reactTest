@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.UserMapper">
+
+	<select id="getAll" resultType="com.example.demo.dto.UserBeen">
+		SELECT *
+		FROM MBOARD
+	</select>
+
+	<select id="getUserCount" parameterType="String"
+		resultType="int">
+		SELECT COUNT(*)
+		FROM MBOARD
+		WHERE USERID = #{userId}
+	</select>
+
+	<select id="getUserPass" parameterType="String"
+		resultType="String">
+		SELECT USERPASS
+		FROM MBOARD
+	</select>
+
+	<select id="getUserId" parameterType="String"
+		resultType="String">
+		SELECT USERId
+		FROM MBOARD
+	</select>
+	
+	<select id="getUser" parameterType="String"
+		resultType="String">
+		SELECT USERID
+		FROM MBOARD
+		WHERE USERID = #{userId} AND USERPASS = #{userPass}
+	</select>
+	
+</mapper>

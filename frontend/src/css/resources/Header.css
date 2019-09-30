@@ -1,0 +1,20 @@
+.c-con {
+    border-bottom: solid 1px #f3f3f3;
+    box-shadow: 0 1px 11px 0 rgba(0,0,0,.1);
+    display: flex;
+}
+.c-item {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+.c-item > a {
+    transition: 0.5s;
+    font-weight: bold;
+}
+.c-item > a:link { color: black; text-decoration: none;}
+.c-item > a:visited { color: black; text-decoration: none;}
+.c-item > a:hover {
+     color: #903bff; 
+     text-decoration: none;
+}
